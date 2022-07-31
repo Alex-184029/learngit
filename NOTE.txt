@@ -3,7 +3,7 @@
 &问题：
 	1.可以添加目录吗？
 
-&永久token: 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
+&永久token: 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
 
 &设定用户名、邮箱：
 	git config --global user.name "<name>"
