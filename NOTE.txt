@@ -3,9 +3,11 @@
 &问题：
 	1.可以添加目录吗？
 
+&永久token: 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
+
 &设定用户名、邮箱：
 	git config --global user.name "<name>"
-	git config --global user.email "<email>
+	git config --global user.email "<email>"
 
 &设定当前目录仓库：git init
 
@@ -29,4 +31,15 @@
 	撤销工作区：git checkout -- <file> //到最近一次add或commit
 	撤销暂存区：git reset HEAD <file>
 
-&删除文件：git rm <file>
+&删除文件：git rm <file>    //git仓库删除，不同于硬盘删除
+
+&关联github：
+	1.生成SSH：$ ssh-keygen -t rsa -C "<email>"
+	2.github中添加SSH Key（title任意，Key粘贴id_rsa.pub）
+	3.仓库关联：git remote add origin https://github.com/Alex-184029/learngit.git
+
+&远程操作：
+	1.初次推送：git push -u origin master
+	2.修改推送：git push origin master     //本地master分支
+	3.查看远程看库信息：git remote -v
+	4.解除绑定库：git remote rm origin     //删除名为origin
