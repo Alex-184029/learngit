@@ -1,5 +1,18 @@
 												Git学习笔记
 
+&问题：
+	1.可以添加目录吗？
+
+&设定用户名、邮箱：
+	git config --global user.name "<name>"
+	git config --global user.email "<email>
+
+&设定当前目录仓库：git init
+
+&查看文件状态：
+	总体变化情况：git status
+	文件变化情况：git diff <file>
+
 &添加文件：
 	git add <file1>
 	git add <file2> <file3>
