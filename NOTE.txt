@@ -9,11 +9,24 @@
 
 &设定当前目录仓库：git init
 
-&查看文件状态：
+&查看状态：
 	总体变化情况：git status
 	文件变化情况：git diff <file>
+	查看日志：git log       //q退出
+	查看日志（单行）：git log --pretty=oneline
+	查看历史命令：git reflog
 
 &添加文件：
 	git add <file1>
 	git add <file2> <file3>
 	git commit -m "add 3 files."
+
+&版本回退：
+	回退上一版本：git reset --hard HEAD^
+	切换特定版本：git reset --hard <1094a...>    //哈希标识
+
+&撤销修改：
+	撤销工作区：git checkout -- <file> //到最近一次add或commit
+	撤销暂存区：git reset HEAD <file>
+
+&删除文件：git rm <file>
