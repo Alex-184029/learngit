@@ -3,8 +3,6 @@
 &问题：
 	1.可以添加目录吗？
 
-&永久token: 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
-
 &设定用户名、邮箱：
 	git config --global user.name "<name>"
 	git config --global user.email "<email>"
@@ -38,8 +36,38 @@
 	2.github中添加SSH Key（title任意，Key粘贴id_rsa.pub）
 	3.仓库关联：git remote add origin https://github.com/Alex-184029/learngit.git
 
-&远程操作：
+&远程推送：（需关联绑定）
 	1.初次推送：git push -u origin master
 	2.修改推送：git push origin master     //本地master分支
 	3.查看远程看库信息：git remote -v
 	4.解除绑定库：git remote rm origin     //删除名为origin
+
+&远程克隆：（无需关联）git clone git@github.com:Alex-184029/learngitclone.git             //即克隆到learngitclone子目录
+
+&分支管理：（类似缓存工作，更安全，实质为指针操作）
+	1.分支创建：
+		git checkout -b <dev>     //创建并切换到dev分支
+		git branch <dev>          //创建dev分支
+		git checkout <dev>        //切换到已有dev分支
+		git switch -c <dev>       //创建并切换到dev分支
+		git switch <dev>          //切换到已有dev分支
+	2.分支查看：git branch
+	3.分支合并：git merge <dev>  //合并指定分支到当前，更新master
+	4.分支删除：git branch -d <dev>
+
+&现场暂存：
+	git stash          //现场暂存
+	git stash list     //查看工作现场
+	git stash apply    //现场恢复，不删除stash内容
+	git stash drop     //删除stash内容
+	git stash pop      //恢复同时删除stash
+
+&使用标签：（类似版本号标记）
+	创建标签：git tag <tagname>  //针对一个分支提交
+	查看标签：git tag            //字母排序
+	查看标签信息：git show <tagname>
+	单独标签推送：git push origin <tagname>
+	全部标签推送：git push origin --tags
+	标签本地删除：git tag -d <tagname>
+	标签远程删除：git push origin :refs/tags/v0.9
+
